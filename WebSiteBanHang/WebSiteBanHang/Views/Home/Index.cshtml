@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+<div style="height:500px;border:solid red">
+    Nội dung chỉnh sửa<br />
+    <button class="btnDangNhap">Đăng Nhập</button>    
+    <div class="login-form">
+        <span>User Login</span>
+        <span><button style="color:red;height:15px;width:10px" class="btnCloseForm">X</button></span><br />
+        Tên đăng nhập: <input type="text" placeholder="User" class="TaiKhoan"/><br />
+        Mật khẩu: <input type="password" placeholder="Pass" class="MatKhau" /><br />
+        <input type="submit" value="Đăng nhập" class="btnLogin"/>
+    </div>
+</div>
+
+<style>
+    .login-form {
+        border: solid black;
+        z-index:999;
+        margin-top: 130px;
+        height: 330px;
+        margin-left:550px;
+        top:0;
+        left:0;
+        position:fixed;
+        background:blueviolet;
+        display:none;
+    }
+</style>
+<script type="text/javascript">
+    $(".btnDangNhap").click(function () {
+        $(".login-form").show();
+    })
+    $(".btnCloseForm").click(function () {
+        $(".login-form").hide();
+    })
+    /*  Định nghĩa và sử dụng function
+    function CloseForm() {
+        $(".login-form").hide();
+    }
+    $(".btnCloseForm").click(CloseForm);*/
+    $(".btnLogin").click(function () {
+        var TaiKhoan = $(".TaiKhoan").val();
+        var MatKhau = $(".MatKhau").val();
+        alert("Tài khoản: " + TaiKhoan + "\nMật khẩu: " + MatKhau);
+    })
+</script>
