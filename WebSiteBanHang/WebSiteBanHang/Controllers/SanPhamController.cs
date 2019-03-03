@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebSiteBanHang.Models;
@@ -28,5 +29,30 @@ namespace WebSiteBanHang.Controllers
             //var lstSanPham = db.SanPham.Where(n => n.MaLoai == 1);
             return PartialView();
         }
-	}
+        [ChildActionOnly]
+        public ActionResult SanPhamStyle1Partial()
+        {
+
+            return PartialView();
+
+        }
+        [ChildActionOnly]
+        public ActionResult SanPhamStyle2Partial()
+        {
+
+            return PartialView();
+
+        }
+        public ActionResult XemChiTiet(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SanPham sp = db.SanPham.SingleOrDefault(n => n.MaSP == id);
+            if (sp == null) return HttpNotFound();
+
+            return View(sp);
+        }
+    }
 }

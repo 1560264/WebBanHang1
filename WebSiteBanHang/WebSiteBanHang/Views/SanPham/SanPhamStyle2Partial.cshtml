@@ -1,0 +1,19 @@
+﻿@using WebSiteBanHang.Models
+@model IEnumerable<SanPham>
+
+<div class="content-top-bottom">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 men">
+        <a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+            <img class="img-responsive" src="@Url.Content("~/Content/img_SanPham/laptop/"+item.HinhAnh)" alt="">
+            <div class="b-wrapper">
+                <h3 class="b-animate b-from-top top-in   b-delay03 ">
+                    <span>Lorem</span>
+                </h3>
+            </div>
+        </a>
+    </div>    
+    }
+    <div class="clearfix"></div>
+</div>
