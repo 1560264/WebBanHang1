@@ -54,5 +54,14 @@ namespace WebSiteBanHang.Controllers
 
             return View(sp);
         }
+        public ActionResult SanPham(int? MaLoaiSP, int MaNSX)
+        {
+            var lstSP = db.SanPham.Where(n => n.MaLoai == MaLoaiSP && n.MaNSX == MaNSX);
+            if (lstSP.Count() == 0)
+            {
+                return HttpNotFound();
+            }
+            return View(lstSP);
+        }
     }
 }
