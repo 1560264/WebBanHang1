@@ -24,10 +24,23 @@ namespace WebSiteBanHang.Controllers
 
             return View();
         }
+
         public ActionResult MenuPartial()
         {
             var lstSanPham = db.SanPham;
             return PartialView(lstSanPham);
+        }
+
+        [HttpPost]
+        public ActionResult DangKy2(ThanhVien tv)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult DangKy1()
+        {
+            return View();
         }
 	}
 }

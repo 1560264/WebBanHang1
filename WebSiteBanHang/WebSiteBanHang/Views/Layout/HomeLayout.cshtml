@@ -39,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="header-left">
                     <ul>
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="@Url.Action("DangKy","Home")">Login</a></li>
                         <li><a href="register.html">Register</a></li>
 
                     </ul>
@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="head-top">
                 <div class="logo">
-                    <a href="index.html"><img src="~/Content/images/logo.png" alt=""></a>
+                    <a href="@Url.Action("Index","Home")"><img src="~/Content/images/logo.png" alt=""></a>
                 </div>
                 @Html.Action("MenuPartial","Home")
                 @*<div class=" h_menu4">

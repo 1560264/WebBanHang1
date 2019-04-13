@@ -365,6 +365,10 @@
     <Content Include="Views\Layout\ProductLayout.cshtml" />
     <Content Include="Views\SanPham\XemChiTiet.cshtml" />
     <Content Include="Views\SanPham\SanPham.cshtml" />
+    <Content Include="Views\Home\DangKy1.cshtml" />
+    <Content Include="Views\Home\DangKy2.cshtml">
+      <BrowseToURL>~/Home/DangKy2</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
