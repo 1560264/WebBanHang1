@@ -38,7 +38,18 @@ namespace WebSiteBanHang.Controllers
         }
 
         [HttpGet]
-        public ActionResult DangKy1()
+        public ActionResult DangKy2()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DangKy(ThanhVien tv)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult DangKy()
         {
             return View();
         }
