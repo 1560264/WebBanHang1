@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteBanHang", "WebSiteBanHang\WebSiteBanHang.csproj", "{711E60FF-2723-409B-AFF3-0EB83932ED3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{8DBA6BA3-84EB-4F06-9D27-8BA788B683F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{711E60FF-2723-409B-AFF3-0EB83932ED3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{711E60FF-2723-409B-AFF3-0EB83932ED3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{711E60FF-2723-409B-AFF3-0EB83932ED3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBA6BA3-84EB-4F06-9D27-8BA788B683F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBA6BA3-84EB-4F06-9D27-8BA788B683F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBA6BA3-84EB-4F06-9D27-8BA788B683F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBA6BA3-84EB-4F06-9D27-8BA788B683F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
