@@ -29,7 +29,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
     <!--header-->
     <div class="header">
-        <div class="header-top">
+        @Html.Partial("~/Views/Layout/HeaderTopPartial.cshtml")
+        @*<div class="header-top">
             <div class="container">
                 <div class="search">
                     <form>
@@ -39,8 +40,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="header-left">
                     <ul>
-                        <li><a href="@Url.Action("DangKy","Home")">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
+                        <li><a id="btnDangNhap" href="#")">Đăng Nhập</a></li>
+                        <li><a href="@Url.Action("DangKy2","Home")">Đăng Ký</a></li>
 
                     </ul>
                     <div class="cart box_1">
@@ -59,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="clearfix"> </div>
             </div>
-        </div>
+        </div>*@
         <div class="container">
             <div class="head-top">
                 <div class="logo">

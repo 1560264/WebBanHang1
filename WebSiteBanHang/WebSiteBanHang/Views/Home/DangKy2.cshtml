@@ -1,56 +1,73 @@
-﻿@using WebSiteBanHang.Models
+﻿@using CaptchaMvc.HtmlHelpers
+@using CaptchaMvc
+
+@using WebSiteBanHang.Models
+ 
 @model ThanhVien
 @{
     ViewBag.Title = "DangKy2";
-    Layout = "~/Views/Layout/ProductLayout.cshtml";
+    Layout = "~/Views/Layout/DangKyLayout.cshtml";
 }
 
-<div class="register">
-    <form>
-        <div class="col-md-6 register-top-grid">
-            <h2 style="text-align:center">Thông Tin Tài Khoản</h2>
-            <div>
-                <span>Tên tài khoản: </span>
-                @Html.TextBox("TaiKhoan")
-            </div>
-            <div>
-                <span>Mật khẩu: </span>
-                @Html.Password("MatKhau")
-            </div>
-            <div>
-                <span>Nhập lại mật khẩu: </span>
-                @Html.Password("NhapLaiMatKhau")
-            </div>
+<div class=" register">
+    <h1>Đăng Ký</h1>
+    @using(Html.BeginForm()){
+    <div class="col-md-6 register-top-grid">
+        <h3>Thông tin cá nhân</h3>
+        <div>
+            <span>Họ tên</span>
+            @Html.TextBox("HoTen", "", new { placeholder = "Họ và Tên",@class="style1"})
+        </div>
+        <div>
+            <span>Nơi ở hiện tại</span>
+            @Html.TextBox("DiaChi", "", new { placeholder = "Địa chỉ", @class = "style1" })
+        </div>
+        <div>
+            <span>Địa chỉ Email</span>
+            @Html.TextBox("Email", "", new { placeholder = "Địa Chỉ Email", @class = "style1" })
+        </div>
+        <div>
+            <span>Số điện thoại</span>
+            @Html.TextBox("SoDienThoai", "", new { placeholder = "ĐIện thoại liên lạc", @class = "style1" })
+        </div>
+        <a class="news-letter" href="#">
+            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Đăng ký nhận thông tin sản phẩm</label>
+        </a>
+    </div>
+    <div class="col-md-6 register-top-grid register-bottom-grid">
+        <h3>Thông tin đăng nhập</h3>
+        <div>
+            <span>Tài khoản</span>
+            @Html.TextBox("TaiKhoan", "", new { placeholder = "Tên tài khoản", @class = "style1" })
+        </div>
+        <div>
+            <span>Mật khẩu</span>
+            @Html.Password("MatKhau", "", new { placeholder = "Mật khẩu", @class = "style1" })
+        </div>
+        <div>
+            <span>Xác nhận mật khẩu</span>
+            @Html.Password("XacNhanMatKhau", "", new { placeholder = "Nhập lại mật khẩu", @class = "style1" })
+        </div>
+        <div>
+            <span>Câu hỏi bảo mật</span>
+            @Html.DropDownList("CauHoi")
+        </div>
+        <div>
+            <span>Câu trả lời</span>
+            @Html.TextBox("CauTraLoi", "", new { placeholder = "Câu trả lời", @class = "style1" })
+        </div>
+        <div>
+            @Html.MathCaptcha()
+        </div>
+        <input type="submit" value="Đăng Ký">
 
-        </div>
-        <div class="col-md-6 register-bottom-grid">
-            <h2 style="text-align:center">Thông Tin Cá Nhân</h2>
-            <div>
-                <span>Họ tên: </span>
-                @Html.TextBox("HoTen")
-            </div>
-            <div>
-                <span>Địa chỉ: </span>
-                @Html.TextBox("DiaChi")
-            </div>
-            <div>
-                <span>Email: </span>
-                @Html.TextBox("Email")
-            </div>
-            <div>
-                <span>Số điện thoại: </span>
-                @Html.TextBox("SoDienThoai")
-            </div>
-            <div>
-                <span>Câu hỏi bí mật: </span>
-                @Html.TextBox("CauHoi")
-            </div>
-            <div>
-                <span>Câu trả lời: </span>
-                @Html.TextBox("CauTraLoi")
-            </div>
-            <input value="Xác Nhận" type="submit" />
-        </div>
-        <div class="clearfix"></div>
-    </form>
+    </div>
+    <div class="clearfix"> </div>
+    }
 </div>
+
+<style>
+    .style1 {
+        font-family: 'Times New Roman';
+    }
+</style>
