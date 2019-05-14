@@ -47,6 +47,7 @@
     <Property Name="UuDai" Type="Int32" />
     <NavigationProperty Name="ChiTietDatHang" Relationship="Self.FK_ChiTietDatHang_DatHang" FromRole="DatHang" ToRole="ChiTietDatHang" />
     <NavigationProperty Name="KhachHang" Relationship="Self.FK_DatHang_KhachHang" FromRole="DatHang" ToRole="KhachHang" />
+    <Property Name="DaHuy" Type="Boolean" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>

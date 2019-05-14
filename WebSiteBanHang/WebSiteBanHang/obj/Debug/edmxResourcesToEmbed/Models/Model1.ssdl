@@ -40,6 +40,7 @@
     <Property Name="TinhTrangGiao" Type="bit" />
     <Property Name="DaThanhToan" Type="bit" />
     <Property Name="UuDai" Type="int" />
+    <Property Name="DaHuy" Type="bit" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>

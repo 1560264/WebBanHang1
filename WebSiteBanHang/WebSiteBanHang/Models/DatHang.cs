@@ -26,6 +26,7 @@ namespace WebSiteBanHang.Models
         public Nullable<bool> TinhTrangGiao { get; set; }
         public Nullable<bool> DaThanhToan { get; set; }
         public Nullable<int> UuDai { get; set; }
+        public Nullable<bool> DaHuy { get; set; }
     
         public virtual ICollection<ChiTietDatHang> ChiTietDatHang { get; set; }
         public virtual KhachHang KhachHang { get; set; }

@@ -105,9 +105,9 @@ C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bi
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\obj\Debug\WebSiteBanHang.csprojResolveAssemblyReference.cache
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\obj\Debug\WebSiteBanHang.dll
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\obj\Debug\WebSiteBanHang.pdb
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bin\CaptchaMvc.dll
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bin\CaptchaMvc.pdb
 C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\bin\CaptchaMvc.xml
+C:\Users\dangk_000\Documents\GitHub\WebBanHang1\WebSiteBanHang\WebSiteBanHang\obj\Debug\WebSiteBanHang.csprojResolveAssemblyReference.cache

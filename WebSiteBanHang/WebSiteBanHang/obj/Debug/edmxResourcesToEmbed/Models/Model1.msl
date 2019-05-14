@@ -36,6 +36,7 @@
     <EntitySetMapping Name="DatHang">
       <EntityTypeMapping TypeName="QuanLyBanHangModel.DatHang">
         <MappingFragment StoreEntitySet="DatHang">
+          <ScalarProperty Name="DaHuy" ColumnName="DaHuy" />
           <ScalarProperty Name="MaDH" ColumnName="MaDH" />
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
           <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />

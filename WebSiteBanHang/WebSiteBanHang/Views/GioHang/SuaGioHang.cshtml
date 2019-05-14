@@ -1,0 +1,60 @@
+﻿@using WebSiteBanHang.Models
+@model itemGioHang
+@{
+    ViewBag.Title = "SuaGioHang";
+    Layout = "~/Views/Layout/ProductLayout.cshtml";
+}
+@{
+    List<itemGioHang> lstGH = ViewBag.GioHang as List<itemGioHang>;
+}
+<div class="col-md-9 product1">
+
+    <table class="table">
+        <tr>
+            <td>Mã SP</td>
+            <td>Tên SP</td>
+            <td>Hình Ảnh</td>
+            <td>Số lượng</td>
+            <td>Đơn giá</td>
+            <td>Thành tiền</td>
+        </tr>
+        @foreach (var item in lstGH)
+        {
+            if (item.MaSP == Model.MaSP)
+            {
+                using (Html.BeginForm("CapNhatGioHang", "GioHang"))
+                {
+                    <tr>
+                        <td>@item.MaSP @Html.Hidden("MaSP",item.MaSP)</td>
+                        <td>@item.TenSP</td>
+                        <td><img src="@Url.Content("~/Content/img_SanPham/laptop/" + item.HinhAnh)" width="150" height="150" /> </td>
+                        <td>@Html.TextBox("SoLuong",item.SoLuong)</td>
+                        <td>@item.DonGia.ToString("#,##")</td>
+                        <td>@item.ThanhTien.ToString("#,##") đồng</td>
+                        <td>
+                            <input type="submit" value="Cập nhật"/>
+                            @Html.ActionLink("Xóa", "XoaGioHang", new { @MaSP = item.MaSP })
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr>
+                    <td>@item.MaSP</td>
+                    <td>@item.TenSP</td>
+                    <td><img src="@Url.Content("~/Content/img_SanPham/laptop/" + item.HinhAnh)" width="150" height="150" /> </td>
+                    <td>@item.SoLuong</td>
+                    <td>@item.DonGia.ToString("#,##")</td>
+                    <td>@item.ThanhTien.ToString("#,##") đồng</td>
+                    <td>
+                        @Html.ActionLink("Sửa", "SuaGioHang", new { @MaSP = item.MaSP })
+                        @Html.ActionLink("Xóa", "XoaGioHang", new { @MaSP = item.MaSP })
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+
+</div>

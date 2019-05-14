@@ -37,7 +37,7 @@
     <div class="col-md-6 register-top-grid register-bottom-grid">
         <h3>Thông tin đăng nhập</h3>
         <div>
-            <span>Tài khoản</span>
+            <span>@Html.LabelFor(model => model.TaiKhoan, new { @class = "control-label col-md-2" })</span>
             @Html.TextBox("TaiKhoan", "", new { placeholder = "Tên tài khoản", @class = "style1" })
         </div>
         <div>

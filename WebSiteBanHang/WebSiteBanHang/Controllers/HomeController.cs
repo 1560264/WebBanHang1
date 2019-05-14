@@ -29,6 +29,8 @@ namespace WebSiteBanHang.Controllers
         {
             var lstSanPham = db.SanPham;
             return PartialView(lstSanPham);
+            
+            
         }
 
         [HttpPost]

@@ -1,0 +1,15 @@
+﻿
+
+
+<div class="cart box_1">
+    <a href="@Url.Action("XemChiTiet","GioHang")">
+        <h3>
+            <div class="total">
+                 @ViewBag.TongTien.ToString("#,##") VND(<span>@ViewBag.TongSoLuong </span> sp)
+            </div>
+            <img src="~/Content/images/cart.png" alt="">
+        </h3>
+    </a>
+    <p><a href="@Url.Action("XemChiTiet","GioHang")" class="simpleCart_empty">Giỏ hàng</a></p>
+
+</div>

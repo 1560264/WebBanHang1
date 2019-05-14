@@ -1,0 +1,79 @@
+﻿@using WebSiteBanHang.Models
+@model List<itemGioHang>
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Layout/ProductLayout.cshtml";
+}
+<div class="col-md-9 product1">
+    @if (Model == null && Model.Count == 0)
+    {
+        <h1>GIỏ hàng rỗng</h1>
+    }
+    else
+    {
+        <table class="table">
+            <tr>
+                <td>Mã SP</td>
+                <td>Tên SP</td>
+                <td>Hình Ảnh</td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+                <td>Thành tiền</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MaSP</td>
+                    <td>@item.TenSP</td>
+                    <td><img src="@Url.Content("~/Content/img_SanPham/laptop/" + item.HinhAnh)" width="150" height="150" /> </td>
+                    <td>@item.SoLuong</td>
+                    <td>@item.DonGia.ToString("#,##")</td>
+                    <td>@item.ThanhTien.ToString("#,##") đồng</td>
+                    <td>
+                        @Html.ActionLink("Sửa", "SuaGioHang", new { @MaSP = item.MaSP })
+                        @Html.ActionLink("Xóa", "XoaGioHang", new { @MaSP = item.MaSP })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <div class="divDatHang" style="text-align:right">
+            @using (Html.BeginForm("DatHang", "GioHang"))
+            {
+                if (Session["TaiKhoan"] == null)
+                {
+                    <table class="table">
+                        <tr>
+                            <td align="center" colspan="2"><b>Thông tin khách hàng</b></td>
+                        </tr>
+                        <tr>
+                            <td>Họ tên</td>
+                            <td align="center">
+                                @Html.TextBox("TenKH")
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Địa chỉ</td>
+                            <td align ="center">
+                                @Html.TextBox("DiaChi")
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td align="center">
+                                @Html.TextBox("Email")
+                            </td>
+                        <tr>
+                            <td>Số điện thoại</td>
+                            <td align="center">
+                                @Html.TextBox("SoDienThoai")
+                            </td>
+                        </tr>
+                    </table>
+                }
+                <input type="submit" value="Đặt hàng" class="btn btn-danger" />
+                @Html.ActionLink("Mua tiếp", "Index", "Home", new { @class = "btn btn-success" })
+            }
+        </div>
+    }
+</div>
